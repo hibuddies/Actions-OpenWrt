@@ -49,7 +49,7 @@ jobs:
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
-        event-type: Source Code Update
+        event-type: lede Source Code Update
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
