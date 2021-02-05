@@ -1,5 +1,10 @@
 name: Start compiling
 
+on:
+  workflow_dispatch:
+ # schedule:
+  #  - cron: 00 16 * * *
+
 jobs:
   build:
     runs-on: ubuntu-latest
