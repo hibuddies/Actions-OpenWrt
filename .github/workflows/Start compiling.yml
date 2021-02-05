@@ -16,8 +16,9 @@ jobs:
     - name: Set time
       run: |
        sudo timedatectl set-timezone "$TZ"
+       echo "DATE=$(date "+%Y-%m-%d %H:%M")" >> $GITHUB_ENV
     - name: Trigger build
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
-        event-type: Start at $TZ
+        event-type: Start at $DATE
