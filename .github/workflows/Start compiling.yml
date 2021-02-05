@@ -10,15 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-    - name: cd
-      id: cd
-      run: |
-        cd ./
-        echo "::set-output name=status::success"
-
     - name: Trigger build
-      if: steps.cd.outputs.status == 'success'
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
