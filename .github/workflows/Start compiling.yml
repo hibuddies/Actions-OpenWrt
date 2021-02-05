@@ -5,13 +5,19 @@ on:
  # schedule:
   #  - cron: 00 16 * * *
 
+env:
+  TZ: Asia/Shanghai
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Set time
+      run: |
+       sudo timedatectl set-timezone "$TZ"
     - name: Trigger build
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
-        event-type: Start
+        event-type: Start at $TZ
