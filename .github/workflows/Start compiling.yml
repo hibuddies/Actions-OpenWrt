@@ -7,7 +7,6 @@ jobs:
     steps:
 
     - name: Trigger build
-      if: steps.cacheHash.outputs.cache-hit != 'true'
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
