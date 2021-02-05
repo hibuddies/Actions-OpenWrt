@@ -1,7 +1,11 @@
 name: Start compiling
 
+env:
+  REPO_URL_LEDE: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
+
 jobs:
-  lede:
+  build:
     runs-on: ubuntu-latest
 
     steps:
