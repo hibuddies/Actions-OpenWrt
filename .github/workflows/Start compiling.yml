@@ -21,4 +21,4 @@ jobs:
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.RELEASES_TOKEN }}
-        event-type: Start at $DATE
+        event-type: Start at ${{ env.DATE }}
