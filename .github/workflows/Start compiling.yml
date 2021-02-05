@@ -1,0 +1,14 @@
+name: Start compiling
+
+jobs:
+  lede:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Trigger build
+      if: steps.cacheHash.outputs.cache-hit != 'true'
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.RELEASES_TOKEN }}
+        event-type: Start
