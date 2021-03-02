@@ -52,7 +52,7 @@ jobs:
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 30
+        retain_days: 7
         keep_minimum_runs: 10
 
 
@@ -95,7 +95,7 @@ jobs:
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 30
+        retain_days: 7
         keep_minimum_runs: 10
 
 
@@ -138,7 +138,7 @@ jobs:
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 30
+        retain_days: 7
         keep_minimum_runs: 10
 
 
@@ -181,5 +181,5 @@ jobs:
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 30
+        retain_days: 7
         keep_minimum_runs: 10
