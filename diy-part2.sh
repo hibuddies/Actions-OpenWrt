@@ -91,6 +91,7 @@ svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/rapidjson
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/subconverter package/subconverter
 #添加smartdns
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ntlf9t/smartdns package/smartdns
+svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns-le package/smartdns-le
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ntlf9t/luci-app-smartdns package/luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
@@ -108,9 +109,6 @@ sed -i "s/PKG_VERSION:=.*/PKG_VERSION:=20200920\.0/" package/openwrt-udp2raw/Mak
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHREPO/PKG_SOURCE_URL:=https:\/\/github\.com/g' {}
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=\@GHCODELOAD/PKG_SOURCE_URL:=https:\/\/codeload\.github\.com/g' {}
 
-./scripts/feeds update -a
-./scripts/feeds install -a
-
 #readd cpufreq for aarch64
 #sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
 
@@ -121,8 +119,12 @@ find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_U
 #修改bypass的makefile
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
+find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/smartdns-le/smartdns/g' {}
 
 #temp fix for dnsforwarder
 #sed -i "s/PKG_SOURCE_URL:=.*/PKG_SOURCE_URL:=https:\/\/github\.com\/1715173329\/dnsforwarder\.git/" package/lean/dnsforwarder/Makefile
 #sed -i "s/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=587e61ae4d75dc976f538088b715a3c8ee26c144/" package/lean/dnsforwarder/Makefile
 #sed -i "s/\ \ URL:=.*/\ \ URL:=https:\/\/github\.com\/1715173329\/dnsforwarder/" package/lean/dnsforwarder/Makefile
+
+./scripts/feeds update -a
+./scripts/feeds install -a
