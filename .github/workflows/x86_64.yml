@@ -148,6 +148,8 @@ jobs:
         cp openwrt/bin/packages/x86_64/packages/open-vm*.ipk openwrt/bin/targets/*/*
         tar -zcvf AllPackages.tar.gz openwrt/bin/packages
         mv AllPackages.tar.gz openwrt/bin/targets/*/*
+        cp openwrt/.config openwrt/x86_64.config
+        cp openwrt/x86_64.config openwrt/bin/targets/*/*
         cd openwrt/bin/targets/*/*
         ls -a
         rm -rf packages config.buildinfo feeds.buildinfo sha256sums version.buildinfo *.manifest
