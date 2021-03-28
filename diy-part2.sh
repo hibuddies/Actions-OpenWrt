@@ -53,6 +53,7 @@ svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust package/shadow
 svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-gost package/luci-app-gost
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/gost package/gost
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos package/luci-app-eqos
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-advancedsetting package/luci-app-advancedsetting
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 # cd package/luci-app-serverchan && git reset --hard 6387b3b47b03d95d3f3bcd42ff98db5bb84fd056 && git pull && cd ../..
 svn co https://github.com/brvphoenix/wrtbwmon/trunk/wrtbwmon package/wrtbwmon
@@ -94,7 +95,7 @@ svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/subcon
 #添加smartdns
 #svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/smartdns package/smartdns
 svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns-le package/smartdns-le
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ntlf9t/luci-app-smartdns package/luci-app-smartdns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 svn co https://github.com/linkease/ddnsto-openwrt/trunk/ddnsto package/ddnsto
