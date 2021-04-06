@@ -3,7 +3,8 @@
 #svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean package/lean
 #svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean package/lean
 
-svn co https://github.com/hibuddies/Actions-OpenWrt/trunk/ARMv8/autocore package/lean/autocore
+svn co https://github.com/hibuddies/Actions-OpenWrt/trunk/ARMv8/21_02/autocore package/lean/autocore
+svn co https://github.com/hibuddies/Actions-OpenWrt/trunk/ARMv8/21_02/luci-app-cpufreq package/lean/luci-app-cpufreq
 
 #immortalwrt
 #svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/autocore package/lean/autocore
@@ -19,7 +20,6 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/luci-app-zerotier package/lean/luci-app-zerotier
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/luci-app-vsftpd package/lean/luci-app-vsftpd
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/vsftpd-alt package/lean/vsftpd-alt
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/luci-app-cpufreq package/lean/luci-app-cpufreq
 
 #Lienol
 #svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/autocore package/lean/autocore
@@ -76,7 +76,7 @@ popd
 #修改配置
 #sed -i 's/DEPENDS:=@(.*/DEPENDS:=@(TARGET_bcm27xx||TARGET_bcm53xx||TARGET_ipq40xx||TARGET_ipq806x||TARGET_mvebu||TARGET_sunxi||TARGET_rockchip||TARGET_armvirt) \\/g' package/lean/autocore/Makefile
 wget -P target/linux/generic/pending-5.4 https://github.com/immortalwrt/immortalwrt/raw/master/target/linux/generic/hack-5.4/312-arm64-cpuinfo-Add-model-name-in-proc-cpuinfo-for-64bit-ta.patch
-cp -r $GITHUB_WORKSPACE/ARMv8/cputemp.sh package/base-files/files/bin
+cp -r $GITHUB_WORKSPACE/ARMv8/21_02/cputemp.sh package/base-files/files/bin
 cd package/base-files/files/bin
 chmod 775 cputemp.sh
 cd -
