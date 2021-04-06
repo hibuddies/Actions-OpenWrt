@@ -3,6 +3,8 @@
 #svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean package/lean
 #svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean package/lean
 
+svn co https://github.com/hibuddies/Actions-OpenWrt/trunk/ARMv8/autocore package/lean/autocore
+
 #immortalwrt
 #svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/autocore package/lean/autocore
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/UnblockNeteaseMusic package/lean/UnblockNeteaseMusic
@@ -19,7 +21,7 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/vsftpd-alt package/lean/vsftpd-alt
 
 #Lienol
-svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/autocore package/lean/autocore
+#svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/autocore package/lean/autocore
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-flowoffload package/lean/luci-app-flowoffload
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-filetransfer package/lean/luci-app-filetransfer
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-netdata package/lean/luci-app-netdata
@@ -70,7 +72,7 @@ make && sudo make install
 popd
 
 #修改配置
-sed -i 's/DEPENDS:=@(.*/DEPENDS:=@(TARGET_bcm27xx||TARGET_bcm53xx||TARGET_ipq40xx||TARGET_ipq806x||TARGET_mvebu||TARGET_sunxi||TARGET_rockchip||TARGET_armvirt) \\/g' package/lean/autocore/Makefile
+#sed -i 's/DEPENDS:=@(.*/DEPENDS:=@(TARGET_bcm27xx||TARGET_bcm53xx||TARGET_ipq40xx||TARGET_ipq806x||TARGET_mvebu||TARGET_sunxi||TARGET_rockchip||TARGET_armvirt) \\/g' package/lean/autocore/Makefile
 wget -P target/linux/generic/pending-5.4 https://github.com/immortalwrt/immortalwrt/raw/master/target/linux/generic/hack-5.4/312-arm64-cpuinfo-Add-model-name-in-proc-cpuinfo-for-64bit-ta.patch
 cp -r $GITHUB_WORKSPACE/ARMv8/cputemp.sh package/base-files/files/bin
 cd package/base-files/files/bin
