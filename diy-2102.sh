@@ -4,7 +4,7 @@
 #svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean package/lean
 
 #immortalwrt
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/autocore package/lean/autocore
+#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/autocore package/lean/autocore
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/UnblockNeteaseMusic package/lean/UnblockNeteaseMusic
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/UnblockNeteaseMusic-Go package/lean/UnblockNeteaseMusic-Go
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/ddns-scripts_aliyun package/lean/ddns-scripts_aliyun
@@ -19,6 +19,7 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/lean/vsftpd-alt package/lean/vsftpd-alt
 
 #Lienol
+svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/autocore package/lean/autocore
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-flowoffload package/lean/luci-app-flowoffload
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-filetransfer package/lean/luci-app-filetransfer
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-netdata package/lean/luci-app-netdata
