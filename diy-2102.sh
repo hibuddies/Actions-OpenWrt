@@ -26,6 +26,7 @@ svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-fl
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-filetransfer package/lean/luci-app-filetransfer
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-app-netdata package/lean/luci-app-netdata
 svn co https://github.com/Lienol/openwrt/branches/21.02/package/lean/luci-lib-fs package/lean/luci-lib-fs
+svn co https://github.com/Lienol/openwrt/branches/21.02/package/diy/parted package/lean/parted
 
 #Lean
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/qt5 package/lean/qt5
