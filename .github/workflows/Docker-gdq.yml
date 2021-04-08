@@ -1,4 +1,4 @@
-name: ARMv8-gdq-o
+name: Docker-gdq
 
 on:
   repository_dispatch:
