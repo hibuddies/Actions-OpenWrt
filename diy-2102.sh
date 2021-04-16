@@ -77,7 +77,8 @@ popd
 #修改配置
 #sed -i 's/DEPENDS:=@(.*/DEPENDS:=@(TARGET_bcm27xx||TARGET_bcm53xx||TARGET_ipq40xx||TARGET_ipq806x||TARGET_mvebu||TARGET_sunxi||TARGET_rockchip||TARGET_armvirt) \\/g' package/lean/autocore/Makefile
 wget -P target/linux/generic/pending-5.4 https://github.com/immortalwrt/immortalwrt/raw/master/target/linux/generic/hack-5.4/312-arm64-cpuinfo-Add-model-name-in-proc-cpuinfo-for-64bit-ta.patch
-cp -r $GITHUB_WORKSPACE/ARMv8/21_02/cputemp.sh package/base-files/files/bin
+#cp -r $GITHUB_WORKSPACE/ARMv8/21_02/cputemp.sh package/base-files/files/bin
+wget -P package/base-files/files/bin https://raw.githubusercontent.com/hibuddies/Actions-OpenWrt/main/ARMv8/21_02/cputemp.sh
 cd package/base-files/files/bin
 chmod 775 cputemp.sh
 cd -
