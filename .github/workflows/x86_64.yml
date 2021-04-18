@@ -147,7 +147,7 @@ jobs:
       run: |
         cp openwrt/bin/packages/x86_64/packages/open-vm*.ipk openwrt/bin/targets/*/*
         cd $GITHUB_WORKSPACE/openwrt/bin/packages
-        sudo tar -zcvf AllPackages.tar.gz ./
+        sudo tar -zcvf AllPackages.tar.gz ./*
         cp AllPackages.tar.gz $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
         cd $GITHUB_WORKSPACE
         cp openwrt/.config openwrt/x86_64.config
