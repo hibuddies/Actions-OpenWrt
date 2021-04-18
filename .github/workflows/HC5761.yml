@@ -128,9 +128,10 @@ jobs:
       id: organize
       if: steps.compile.outputs.status == 'success' && !cancelled()
       run: |
+        cd $GITHUB_WORKSPACE/openwrt/bin/packages
+        sudo tar -zcvf AllPackages.tar.gz ./
+        cp AllPackages.tar.gz $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
         cd $GITHUB_WORKSPACE
-        sudo tar -zcvf AllPackages.tar.gz openwrt/bin/packages
-        cp AllPackages.tar.gz openwrt/bin/targets/*/*
         cp openwrt/.config openwrt/HC5761.config
         cp openwrt/HC5761.config openwrt/bin/targets/*/*
         cd openwrt/bin/targets/*/*
