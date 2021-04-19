@@ -24,7 +24,7 @@ rm -rf /home/zlq/lede/package/ssocks
 rm -rf /home/zlq/lede/package/xray-core
 rm -rf /home/zlq/lede/package/xray-plugin
 rm -rf /home/zlq/lede/package/shadowsocks-rust
-rm -rf /home/zlq/lede/package/v2ray-plugin
+rm -rf /home/zlq/bianyi/ledeipk/package/v2ray-plugin
 rm -rf /home/zlq/lede/package/luci-app-gost
 rm -rf /home/zlq/lede/package/gost
 rm -rf /home/zlq/lede/package/luci-app-eqos
