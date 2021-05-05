@@ -28,7 +28,6 @@ rm -rf /home/zlq/bianyi/ledeipk/package/v2ray-plugin
 rm -rf /home/zlq/lede/package/luci-app-gost
 rm -rf /home/zlq/lede/package/gost
 rm -rf /home/zlq/lede/package/luci-app-eqos
-rm -rf /home/zlq/lede/package/luci-app-advancedsetting
 rm -rf /home/zlq/lede/package/luci-app-serverchan
 rm -rf /home/zlq/lede/package/wrtbwmon
 rm -rf /home/zlq/lede/luci-app-wrtbwmon
