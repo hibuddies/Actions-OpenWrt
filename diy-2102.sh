@@ -41,7 +41,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libdouble-convers
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping package/tcping
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/chinadns-ng
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev package/shadowsocksr-libev
+svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev package/shadowsocksr-libev
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs package/simple-obfs
 svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin package/v2ray-plugin
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy package/naiveproxy
