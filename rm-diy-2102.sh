@@ -8,6 +8,7 @@ rm -rf /home/zlq/bianyi/openwrtgf/package/lua-maxminddb
 rm -rf /home/zlq/bianyi/openwrtgf/package/shadowsocksr-libev
 rm -rf /home/zlq/bianyi/openwrtgf/package/simple-obfs
 rm -rf /home/zlq/bianyi/openwrtgf/package/v2ray-plugin
+rm -rf /home/zlq/bianyi/openwrtgf/package/shadowsocksr-libev
 rm -rf /home/zlq/bianyi/openwrtgf/package/naiveproxy
 rm -rf /home/zlq/bianyi/openwrtgf/package/redsocks2
 rm -rf /home/zlq/bianyi/openwrtgf/package/microsocks
